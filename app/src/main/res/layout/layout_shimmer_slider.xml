@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="@dimen/shimmer_product_list_header_width"
+        android:layout_height="@dimen/shimmer_product_list_header_height"
+        android:layout_marginTop="@dimen/item_product_list_header_top"
+        android:background="@color/shimmer_placeholder" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_image_slider_height"
+        android:layout_marginTop="@dimen/item_product_list_header_bottom"
+        app:cardBackgroundColor="@color/shimmer_placeholder"
+        app:cardCornerRadius="@dimen/slider_corner_radius" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

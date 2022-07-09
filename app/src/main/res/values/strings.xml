@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Спунбилл</string>
+
+    <string name="main_nav_title_home">Главная</string>
+    <string name="main_nav_title_catalog">Каталог</string>
+    <string name="main_nav_title_favorites">Избранное</string>
+    <string name="main_nav_title_profile">Профиль</string>
+
+    <string name="hint_phone_number">Номер телефона</string>
+    <string name="hint_verification_code">Код проверки</string>
+
+    <string name="sign_in_send_code_button_text">Отправить код</string>
+    <string name="sign_in_label">Введите номер телефона\nдля входа</string>
+
+    <string name="phone_verification_apply_button_text">Подтвердить</string>
+    <string name="phone_verification_label">Код отправлен на номер\n</string>
+    <string name="image_description">image_description</string>
+    <string name="phone_verification_send_code_again">Отправить коде еще раз</string>
+    <string name="symbol_minus">-</string>
+    <string name="symbol_plus">+</string>
+</resources>

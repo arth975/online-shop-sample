@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/common_margin_horizontal">
+
+    <View
+        android:id="@+id/text_shimmer"
+        android:layout_width="@dimen/shimmer_product_list_header_width"
+        android:layout_height="@dimen/shimmer_product_list_header_height"
+        android:layout_marginTop="@dimen/item_product_list_header_top"
+        android:background="@color/shimmer_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item_first"
+        android:layout_width="@dimen/product_card_item_width"
+        android:layout_height="136dp"
+        android:layout_marginTop="@dimen/item_product_list_header_bottom"
+        app:cardBackgroundColor="@color/shimmer_placeholder"
+        app:cardCornerRadius="@dimen/item_product_card_corner_radius"
+        app:layout_constraintEnd_toStartOf="@+id/item_second"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_shimmer" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item_second"
+        android:layout_width="@dimen/product_card_item_width"
+        android:layout_height="136dp"
+        android:layout_marginTop="@dimen/item_product_list_header_bottom"
+        app:cardBackgroundColor="@color/shimmer_placeholder"
+        app:cardCornerRadius="@dimen/item_product_card_corner_radius"
+        app:layout_constraintEnd_toStartOf="@+id/item_third"
+        app:layout_constraintStart_toEndOf="@+id/item_first"
+        app:layout_constraintTop_toBottomOf="@id/text_shimmer" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item_third"
+        android:layout_width="@dimen/product_card_item_width"
+        android:layout_height="136dp"
+        android:layout_marginTop="@dimen/item_product_list_header_bottom"
+        app:cardBackgroundColor="@color/shimmer_placeholder"
+        app:cardCornerRadius="@dimen/item_product_card_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_second"
+        app:layout_constraintTop_toBottomOf="@id/text_shimmer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

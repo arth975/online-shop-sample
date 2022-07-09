@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="ru.spoonbill.app.ui.fragments.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splashFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_mainNavHostFragment"
+            app:destination="@id/mainNavHostFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_home_graph"
+            app:destination="@id/home_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneVerificationFragment"
+        android:name="ru.spoonbill.app.ui.fragments.PhoneVerificationFragment"
+        android:label="PhoneVerificationFragment">
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_phoneVerificationFragment_to_mainNavHostFragment"
+            app:destination="@id/mainNavHostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="ru.spoonbill.app.ui.fragments.SignInFragment"
+        android:label="SignInFragment">
+        <action
+            android:id="@+id/action_signInFragment_to_phoneVerificationFragment"
+            app:destination="@id/phoneVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainNavHostFragment"
+        android:name="ru.spoonbill.app.ui.fragments.MainNavHostFragment"
+        android:label="MainNavHostFragment" />
+    <include app:graph="@navigation/home_graph" />
+</navigation>

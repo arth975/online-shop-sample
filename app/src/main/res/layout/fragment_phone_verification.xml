@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintEnd_toEndOf="@id/text_label"
+        app:layout_constraintStart_toStartOf="@id/text_label"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_code_verif" />
+
+    <TextView
+        android:id="@+id/text_label"
+        style="@style/Widget.CustomTextInputLayoutLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_verification_label"
+        android:layout_marginTop="@dimen/phone_verification_label_margin_top"
+        app:layout_constraintEnd_toEndOf="@id/til_verification_code"
+        app:layout_constraintStart_toStartOf="@id/til_verification_code"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_verification_code"
+        style="@style/Widget.CustomTextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        android:layout_marginTop="@dimen/custom_text_input_layout_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_label"
+        app:layout_constraintWidth_percent="@dimen/custom_text_input_layout_width_percent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/Widget.CustomTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_verification_code"
+            android:maxLength="4"
+            android:paddingVertical="@dimen/custom_text_input_edit_text_padding_vertical" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_send_again"
+        style="@style/Widget.PhoneVerificationSendCodeAgainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/phone_verification_send_code_again_text_margin_start"
+        android:layout_marginTop="@dimen/phone_verification_send_code_again_text_margin_top"
+        android:text="@string/phone_verification_send_code_again"
+        app:layout_constraintStart_toStartOf="@id/til_verification_code"
+        app:layout_constraintTop_toBottomOf="@id/til_verification_code" />
+
+    <TextView
+        android:id="@+id/text_send_again_countdown"
+        style="@style/Widget.PhoneVerificationSendCodeAgainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/phone_verification_send_code_again_text_margin_start"
+        app:layout_constraintStart_toEndOf="@id/text_send_again"
+        app:layout_constraintTop_toTopOf="@id/text_send_again" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_apply"
+        style="@style/Widget.CustomSubmitMaterialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/custom_submit_button_margin_top"
+        android:text="@string/phone_verification_apply_button_text"
+        app:layout_constraintEnd_toEndOf="@id/til_verification_code"
+        app:layout_constraintStart_toStartOf="@id/til_verification_code"
+        app:layout_constraintTop_toBottomOf="@+id/text_send_again" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

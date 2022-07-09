@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.makeramen.roundedimageview.RoundedImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/item_story_size"
+    android:layout_height="@dimen/item_story_size"
+    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+    android:layout_marginBottom="@dimen/item_story_margin_bottom"
+    android:contentDescription="@string/image_description"
+    android:src="@drawable/image_story"
+    app:riv_corner_radius="@dimen/item_story_corner_radius" />

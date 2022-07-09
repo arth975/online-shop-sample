@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ru.spoonbill.app.ui.home.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/catalogFragment"
+        android:name="ru.spoonbill.app.ui.fragments.CatalogFragment"
+        android:label="CatalogFragment" />
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="ru.spoonbill.app.ui.fragments.FavoritesFragment"
+        android:label="FavoritesFragment" />
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="ru.spoonbill.app.ui.fragments.MyProfileFragment"
+        android:label="MyProfileFragment" />
+</navigation>
