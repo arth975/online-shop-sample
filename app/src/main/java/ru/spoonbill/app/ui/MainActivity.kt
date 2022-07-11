@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(mBinding.root)
 
-        mInsetsController = WindowCompat.getInsetsController(window, window.decorView)
-        hideSystemBars()
+        //mInsetsController = WindowCompat.getInsetsController(window, window.decorView)
+        //hideSystemBars()
         val navHostFragment = mBinding.graphContainer.getFragment<NavHostFragment>()
 
-        navHostFragment.navController.addOnDestinationChangedListener { _, dest, _ ->
+        /*navHostFragment.navController.addOnDestinationChangedListener { _, dest, _ ->
             if (dest.id != R.id.splashFragment) {
                 window.setSystemBarsDarkIcons()
                 if (Build.VERSION.SDK_INT > Build.VERSION_CODES.P)
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                 else
                     window.clearFlags(mSystemUiHideNavigationFlag)
             }
-        }
+        }*/
     }
 
     private fun hideSystemBars() {

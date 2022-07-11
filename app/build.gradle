@@ -46,19 +46,22 @@ dependencies {
 
     implementation project(":common")
     implementation project(":autoSlider")
+    implementation project(":data")
 
     // koin
     implementation "io.insert-koin:koin-core:$koin_version"
 
     // Coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$project.coroutines_version"
 
     // View-model
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
     // Navigation component
-    implementation "androidx.navigation:navigation-fragment-ktx:${project.nav_version}"
-    implementation "androidx.navigation:navigation-ui-ktx:${project.nav_version}"
+    implementation "androidx.navigation:navigation-fragment-ktx:$project.nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$project.nav_version"
+
+    implementation "io.insert-koin:koin-android:$project.koin_version"
 
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'com.github.bumptech.glide:glide:4.13.2'

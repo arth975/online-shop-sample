@@ -10,7 +10,7 @@
         android:label="HomeFragment" />
     <fragment
         android:id="@+id/catalogFragment"
-        android:name="ru.spoonbill.app.ui.fragments.CatalogFragment"
+        android:name="ru.spoonbill.app.ui.catalog.CatalogFragment"
         android:label="CatalogFragment" />
 
     <fragment

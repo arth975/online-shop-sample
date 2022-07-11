@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="ru.spoonbill.app.ui.fragments.SplashFragment"
+        android:name="ru.spoonbill.app.ui.splash.SplashFragment"
         android:label="SplashFragment">
         <action
             android:id="@+id/action_splashFragment_to_signInFragment"
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/phoneVerificationFragment"
-        android:name="ru.spoonbill.app.ui.fragments.PhoneVerificationFragment"
+        android:name="ru.spoonbill.app.ui.phone_verif.PhoneVerificationFragment"
         android:label="PhoneVerificationFragment">
         <argument
             android:name="phoneNumber"
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="ru.spoonbill.app.ui.fragments.SignInFragment"
+        android:name="ru.spoonbill.app.ui.sign_in.SignInFragment"
         android:label="SignInFragment">
         <action
             android:id="@+id/action_signInFragment_to_phoneVerificationFragment"

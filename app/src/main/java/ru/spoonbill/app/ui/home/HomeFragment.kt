@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -14,18 +13,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.spoonbill.app.databinding.FragmentHomeBinding
-import ru.spoonbill.app.model.ProductListItem
-import ru.spoonbill.app.model.StoryUI
+import ru.spoonbill.app.ui.home.model.ProductCollection
+import ru.spoonbill.app.ui.home.model.StoryUi
 import ru.spoonbill.app.ui.home.adapters.ParentAdapter
 import ru.spoonbill.app.ui.home.adapters.StoryAdapter
-import ru.spoonbill.app.ui.home.image_slider.ImageSliderItem
+import ru.spoonbill.app.ui.home.model.HomeResult
+import ru.spoonbill.app.ui.home.model.PromotionUi
 import ru.spoonbill.app.utils.Resource
 
 class HomeFragment : Fragment() {
 
     private var mBinding: FragmentHomeBinding? = null
-    private val mViewModel by viewModels<HomeViewModel>()
+    private val mViewModel by viewModel<HomeViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,6 +35,7 @@ class HomeFragment : Fragment() {
     ): View? {
         if (mBinding == null) {
             mBinding = FragmentHomeBinding.inflate(inflater, container, false)
+            mViewModel.fetchResult()
         }
         return mBinding?.root
     }
@@ -41,7 +43,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         collectResourceFlow()
-        mViewModel.fetchResult()
     }
 
     private fun collectResourceFlow() {
@@ -64,12 +65,12 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun initRecyclerViews(result: HomeViewModel.HomeResult) {
-        initParentRecyclerView(result.lists, result.sliderItems)
+    private fun initRecyclerViews(result: HomeResult) {
+        initParentRecyclerView(result.lists, result.promotions)
         initStoriesRecyclerView(result.stories)
     }
 
-    private fun initStoriesRecyclerView(stories: List<StoryUI>) = mBinding?.rvStories?.let {
+    private fun initStoriesRecyclerView(stories: List<StoryUi>) = mBinding?.rvStories?.let {
         it.layoutManager =
             LinearLayoutManager(requireContext()).apply { orientation = RecyclerView.HORIZONTAL }
         it.adapter = StoryAdapter(stories)
@@ -77,8 +78,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun initParentRecyclerView(
-        lists: List<ProductListItem>,
-        sliderItem: List<ImageSliderItem>
+        lists: List<ProductCollection>,
+        sliderItem: List<PromotionUi>
     ) = mBinding?.rvProductsParent?.let {
         it.layoutManager = LinearLayoutManager(requireContext())
         it.adapter = ParentAdapter(lists, sliderItem)

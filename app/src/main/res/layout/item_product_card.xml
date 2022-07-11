@@ -5,14 +5,14 @@
 
         <variable
             name="product"
-            type="ru.spoonbill.app.model.ProductUI" />
+            type="ru.spoonbill.app.ui.home.model.ProductUi" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="@dimen/product_card_item_width"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+        android:layout_marginEnd="@dimen/product_card_item_margin_end"
         android:layout_marginTop="@dimen/item_product_list_header_bottom"
         android:layout_marginBottom="@dimen/item_product_list_header_top"
         android:background="@drawable/background_product_card"

@@ -16,3 +16,4 @@ rootProject.name = "spoonbill"
 include ':app'
 include ':common'
 include ':autoSlider'
+include ':data'

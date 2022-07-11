@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_header"
+        style="@style/Widget.HeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parent catalog"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_catalogs"
+        style="@style/Widget.CustomRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/item_product_list_header_bottom"
+        android:paddingBottom="@dimen/item_product_list_header_top" />
+
+</LinearLayout>

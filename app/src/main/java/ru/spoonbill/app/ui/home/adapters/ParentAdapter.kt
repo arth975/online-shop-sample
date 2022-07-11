@@ -7,15 +7,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ru.spoonbill.app.autoslider.IndicatorView.animation.type.IndicatorAnimationType
 import ru.spoonbill.app.autoslider.SliderAnimations
-import ru.spoonbill.app.databinding.ItemImageSliderBinding
-import ru.spoonbill.app.databinding.ItemProductListBinding
-import ru.spoonbill.app.model.ProductListItem
-import ru.spoonbill.app.ui.home.image_slider.ImageSliderAdapter
-import ru.spoonbill.app.ui.home.image_slider.ImageSliderItem
+import ru.spoonbill.app.databinding.ItemProductParentBinding
+import ru.spoonbill.app.databinding.ItemPromotionSliderBinding
+import ru.spoonbill.app.ui.home.model.ProductCollection
+import ru.spoonbill.app.ui.home.model.PromotionUi
 
 class ParentAdapter(
-    private val mProductListItems: List<ProductListItem>,
-    private val mSliderItems: List<ImageSliderItem>
+    private val mProductListItems: List<ProductCollection>,
+    private val mSliderItems: List<PromotionUi>
 ) : RecyclerView.Adapter<ParentAdapter.ItemViewHolder<*>>() {
 
     private val mPool by lazy { RecyclerView.RecycledViewPool() }
@@ -24,12 +23,12 @@ class ParentAdapter(
         abstract fun bind(item: T)
     }
 
-    inner class ParentViewHolder(private val mBinding: ItemProductListBinding) :
-        ItemViewHolder<ProductListItem>(mBinding.root) {
-        override fun bind(item: ProductListItem) {
+    inner class ParentViewHolder(private val mBinding: ItemProductParentBinding) :
+        ItemViewHolder<ProductCollection>(mBinding.root) {
+        override fun bind(item: ProductCollection) {
             mBinding.textListName.text = item.name
-            mBinding.rvProducts.setRecycledViewPool(mPool)
-            //mBinding.rvProducts.setHasFixedSize(true)
+            //mBinding.rvProducts.setRecycledViewPool(mPool)
+            mBinding.rvProducts.setHasFixedSize(true)
             mBinding.rvProducts.adapter = ProductCardAdapter(item.items)
             mBinding.rvProducts.layoutManager = LinearLayoutManager(mBinding.root.context).apply {
                 orientation = RecyclerView.HORIZONTAL
@@ -37,10 +36,10 @@ class ParentAdapter(
         }
     }
 
-    inner class SliderViewHolder(private val mBinding: ItemImageSliderBinding) :
-        ItemViewHolder<List<ImageSliderItem>>(mBinding.root) {
-        override fun bind(items: List<ImageSliderItem>) {
-            val adapter = ImageSliderAdapter(items)
+    inner class SliderViewHolder(private val mBinding: ItemPromotionSliderBinding) :
+        ItemViewHolder<List<PromotionUi>>(mBinding.root) {
+        override fun bind(items: List<PromotionUi>) {
+            val adapter = PromotionSliderAdapter(items)
             mBinding.textListName.text = "Акции"
             with(mBinding.slider) {
                 setIndicatorAnimation(IndicatorAnimationType.WORM)
@@ -55,14 +54,14 @@ class ParentAdapter(
         return when (viewType) {
             VIEW_TYPE_SLIDER ->
                 SliderViewHolder(
-                    ItemImageSliderBinding.inflate(
+                    ItemPromotionSliderBinding.inflate(
                         LayoutInflater.from(parent.context),
                         parent, false
                     )
                 )
             else ->
                 ParentViewHolder(
-                    ItemProductListBinding.inflate(
+                    ItemProductParentBinding.inflate(
                         LayoutInflater.from(parent.context),
                         parent, false
                     )

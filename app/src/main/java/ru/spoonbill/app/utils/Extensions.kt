@@ -1,5 +1,6 @@
 package ru.spoonbill.app.utils
 
+import android.app.Activity
 import android.content.Context
 import android.text.Editable
 import android.text.TextWatcher
@@ -13,6 +14,15 @@ fun EditText.showSoftInputKeyboard() {
     imm.showSoftInput(
         this,
         InputMethodManager.SHOW_IMPLICIT
+    )
+}
+
+fun EditText.hideSoftInputKeyboard(activity: Activity) {
+    val imm = (context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager)
+    clearFocus()
+    imm.hideSoftInputFromWindow(
+        activity.currentFocus?.windowToken,
+        0
     )
 }
 

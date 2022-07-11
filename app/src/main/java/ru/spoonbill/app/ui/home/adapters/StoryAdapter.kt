@@ -4,10 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.spoonbill.app.databinding.ItemStoryBinding
-import ru.spoonbill.app.model.StoryUI
+import ru.spoonbill.app.ui.home.model.StoryUi
 
 class StoryAdapter(
-    private val mProductItems: List<StoryUI>
+    private val mProductItems: List<StoryUi>
 ) : RecyclerView.Adapter<StoryAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(private val mBinding: ItemStoryBinding) :
