@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="136dp"
+    android:layout_height="186dp"
+    android:layout_marginEnd="@dimen/product_card_item_margin_end"
+    android:layout_marginTop="@dimen/item_story_margin_bottom"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="@dimen/item_story_corner_radius"
+    app:cardElevation="0dp"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/primary">
+
+    <ImageView
+        android:id="@+id/promotionImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/image_description"
+        tools:src="@drawable/image_story" />
+
+    <TextView
+        android:id="@+id/promotionDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="6dp"
+        android:background="@drawable/background_category_name"
+        android:fontFamily="@font/open_sans_bold"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.04"
+        android:textStyle="bold"
+        android:gravity="end"
+        tools:text="Description of the promotion"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="3dp"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+</com.google.android.material.card.MaterialCardView>

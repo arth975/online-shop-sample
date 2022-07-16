@@ -16,7 +16,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/item_first"
-        android:layout_width="@dimen/product_card_item_width"
+        android:layout_width="100dp"
         android:layout_height="136dp"
         android:layout_marginTop="@dimen/item_product_list_header_bottom"
         app:cardBackgroundColor="@color/shimmer_placeholder"
@@ -28,7 +28,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/item_second"
-        android:layout_width="@dimen/product_card_item_width"
+        android:layout_width="100dp"
         android:layout_height="136dp"
         android:layout_marginTop="@dimen/item_product_list_header_bottom"
         app:cardBackgroundColor="@color/shimmer_placeholder"
@@ -39,7 +39,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/item_third"
-        android:layout_width="@dimen/product_card_item_width"
+        android:layout_width="100dp"
         android:layout_height="136dp"
         android:layout_marginTop="@dimen/item_product_list_header_bottom"
         app:cardBackgroundColor="@color/shimmer_placeholder"

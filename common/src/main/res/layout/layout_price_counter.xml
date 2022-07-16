@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <TextView
+        android:id="@+id/buttonDecrease"
+        android:layout_width="@dimen/spoonbill_button_circle_size"
+        android:layout_height="@dimen/spoonbill_button_circle_size"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/background_circle_button"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:gravity="center"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:includeFontPadding="false"
+        android:text="-"
+        android:textColor="@color/font_black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:backgroundTint="@android:color/transparent"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:letterSpacing="-0.02"
+        android:minHeight="0dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="0dp"
+        android:text="2"
+        android:textColor="@color/font_black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/buttonIncrease"
+        android:layout_width="@dimen/spoonbill_button_circle_size"
+        android:layout_height="@dimen/spoonbill_button_circle_size"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/background_circle_button"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:text="+"
+        android:textColor="@color/font_black"
+        android:textSize="18sp" />
+
+</merge>

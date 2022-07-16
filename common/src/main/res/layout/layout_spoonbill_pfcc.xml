@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--Start: Calories-->
+    <TextView
+        android:id="@+id/textColories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:letterSpacing="-0.02"
+        android:text="212"
+        android:textColor="@color/font_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/textColoriesLabel"
+        app:layout_constraintStart_toStartOf="@id/textColoriesLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textColoriesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.02"
+        android:text="Ккал"
+        android:textColor="@color/font_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textProteinLabel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textColories" />
+    <!--End: Calories-->
+
+
+    <!--Start: Protein-->
+    <TextView
+        android:id="@+id/textProtein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:letterSpacing="-0.02"
+        android:text="212"
+        android:textColor="@color/font_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/textProteinLabel"
+        app:layout_constraintStart_toStartOf="@id/textProteinLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textProteinLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.02"
+        android:text="Белки"
+        android:textColor="@color/font_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textFatLabel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textColoriesLabel"
+        app:layout_constraintTop_toBottomOf="@id/textProtein" />
+    <!--End: Calories-->
+
+    <!--Start: Protein-->
+    <TextView
+        android:id="@+id/textFat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:letterSpacing="-0.02"
+        android:text="212"
+        android:textColor="@color/font_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/textFatLabel"
+        app:layout_constraintStart_toStartOf="@id/textFatLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textFatLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.02"
+        android:text="Жиры"
+        android:textColor="@color/font_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textCarboLabel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textProteinLabel"
+        app:layout_constraintTop_toBottomOf="@id/textFat" />
+    <!--End: Calories-->
+
+    <!--Start: Protein-->
+    <TextView
+        android:id="@+id/textCarbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:letterSpacing="-0.02"
+        android:text="212"
+        android:textColor="@color/font_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/textCarboLabel"
+        app:layout_constraintStart_toStartOf="@id/textCarboLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textCarboLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.02"
+        android:text="Углеводы"
+        android:textColor="@color/font_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textFatLabel"
+        app:layout_constraintTop_toBottomOf="@id/textCarbo" />
+    <!--End: Calories-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

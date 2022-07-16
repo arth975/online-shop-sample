@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ru.spoonbill.app.common.widgets.SwipeDownLine
+        android:id="@+id/swipeDownLine"
+        android:layout_width="@dimen/swipe_down_line_size"
+        android:layout_height="@dimen/swipe_down_line_height"
+        android:layout_marginTop="@dimen/swipe_down_line_top_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textDeliveryTime"
+        style="@style/FontSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="Будет через 26 минут"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/swipeDownLine" />
+
+    <TextView
+        android:id="@+id/textDeliveryAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="ул. Петрозаводская,  д 5, кв 3"
+        app:drawableStartCompat="@drawable/ic_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textDeliveryTime" />
+
+    <View
+        android:id="@+id/lineRvTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_line_height"
+        android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+        android:layout_marginTop="26dp"
+        android:background="@color/gray_a1"
+        app:layout_constraintTop_toBottomOf="@id/textDeliveryAddress" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCartProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+        android:clipToPadding="false"
+        android:paddingVertical="8dp"
+        app:layout_constraintTop_toBottomOf="@id/lineRvTop" />
+
+    <View
+        android:id="@+id/lineRvBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_line_height"
+        android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+        android:background="@color/gray_a1"
+        app:layout_constraintTop_toBottomOf="@id/rvCartProducts" />
+
+    <TextView
+        android:id="@+id/textDeliveryPrice"
+        style="@style/FontSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Будет через 26 минут"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineRvBottom" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/open_sans_bold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="-0.02"
+        android:minHeight="0dp"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="10dp"
+        android:text="@string/cart_pay_button_text"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        style="@style/FontSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_margin_horizontal"
+        android:layout_marginBottom="21dp"
+        android:text="Итого 240 Руб."
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/buttonPay"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/rvLinesGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="lineRvTop,lineRvBottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

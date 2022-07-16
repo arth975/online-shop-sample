@@ -21,4 +21,18 @@
 
     <string name="toolbar_catalog_hint_address">Введите ваш адрес</string>
     <string name="toolbar_catalog_hint_search">Найти продукты</string>
+
+    <string name="single_product_label_composition">Состав</string>
+    <string name="single_product_label_exp_date">Срок годности</string>
+    <string name="single_product_label_description">Описание</string>
+    <string name="cart_pay_button_text">Оплатить</string>
+    <string name="favorites_label">Избранное</string>
+    <string name="home_label_popular">Популярные</string>
+    <string name="home_label_recommended">Рекоммендуемые</string>
+    <string name="home_label_actual">Актуальные</string>
+    <string name="profile_button_terms_conditions">Правила и соглашения</string>
+    <string name="profile_button_a_and_q">Ответы на вопросы</string>
+    <string name="profile_button_contact_us">Связаться с нами</string>
+    <string name="profile_button_order_history">История заказов</string>
+    <string name="profile_button_preferences">Настройки</string>
 </resources>

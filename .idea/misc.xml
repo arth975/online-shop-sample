@@ -38,6 +38,42 @@
         <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/android/app/src/main/res/layout/layout_shimmer_story.xml" value="0.4" />
         <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/android/app/src/main/res/layout/toolbar_catalog.xml" value="0.264" />
         <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/android/app/src/main/res/menu/main_nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/background_category_name.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/background_product_card.xml" value="0.1315" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/background_rounded_bottom_sheet.xml" value="0.139" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/bg_back_button.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/checkable_button_favorite.xml" value="0.192" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/ic_button_favorites_checked.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/ic_button_favorites_unchecked.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/ic_cart.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/ic_favorites_checked.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/ic_favorites_unchecked.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/ic_launcher.xml" value="0.1605" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/drawable/ic_nav_favorites.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/bottom_sheet_cart.xml" value="0.264" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/bottom_sheet_single_product.xml" value="0.264" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/fragment_favorites.xml" value="0.264" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/fragment_home.xml" value="0.16799999999999998" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/fragment_main_nav_host.xml" value="0.16" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/fragment_profile.xml" value="0.176" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/fragment_single_category.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/fragment_splash.xml" value="0.2" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/item_cart_product.xml" value="0.264" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/item_category.xml" value="0.10969494358545759" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/item_product.xml" value="0.2275449101796407" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/item_product_card.xml" value="0.4" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/item_product_parent.xml" value="0.14369900271985495" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/item_promotion_slider.xml" value="0.4" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/item_promotion_slider_view.xml" value="0.16183136899365366" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/item_promotions.xml" value="0.1631912964641886" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/item_story.xml" value="0.4" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/app/src/main/res/layout/layout_shimmer_product_list_item.xml" value="0.22445489525438223" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/common/src/main/res/drawable/background_circle_button.xml" value="0.176" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/common/src/main/res/drawable/swipe_down_line.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/common/src/main/res/layout/button_add_to_cart.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/common/src/main/res/layout/layout_price_counter.xml" value="0.4" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/common/src/main/res/layout/layout_spoonbill_pfcc.xml" value="0.264" />
+        <entry key="..\:/Users/Lenovo/Desktop/projects/spoonbill/spoonbill-android/common/src/main/res/layout/swipe_down_line.xml" value="1.0" />
       </map>
     </option>
   </component>

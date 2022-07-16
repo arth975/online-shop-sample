@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="product"
+            type="ru.spoonbill.droid.ui.home.entity.ProductUi" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            style="@style/Widget.NotOverscrollable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/single_product_add_to_cart_button_height"
+            android:clipToPadding="false"
+            android:paddingBottom="15dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/single_product_width"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/checkboxIsFavorite"
+                    android:layout_width="27dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="@dimen/common_margin_horizontal"
+                    android:layout_marginBottom="14dp"
+                    android:button="@drawable/checkable_button_favorite"
+                    android:buttonTint="@color/favorite_selector"
+                    android:checked="@{product.favorite}"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    app:layout_constraintBottom_toBottomOf="@id/imageProduct"
+                    app:layout_constraintEnd_toEndOf="@id/imageProduct" />
+
+                <TextView
+                    android:id="@+id/textProductName"
+                    style="@style/FontSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:layout_marginTop="22dp"
+                    android:letterSpacing="-0.02"
+                    android:text="@{product.name}"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageProduct" />
+
+                <TextView
+                    android:id="@+id/textPrice"
+                    style="@style/Widget.SingleProduct.SemiBoldText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common_margin_horizontal"
+                    android:text='@{String.valueOf(product.price) + " Руб."}'
+                    app:layout_constraintBottom_toBottomOf="@id/priceCounter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/priceCounter" />
+
+                <ru.spoonbill.app.common.widgets.price_counter.SpoonbillPriceCounter
+                    android:id="@+id/priceCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/common_margin_horizontal"
+                    android:paddingVertical="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textProductName" />
+
+                <View
+                    android:id="@+id/underline_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line_height"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:background="@color/gray_a1"
+                    app:layout_constraintTop_toBottomOf="@id/priceCounter" />
+
+                <ru.spoonbill.droid.common.widgets.SpoonbillPfcc
+                    android:id="@+id/pfcc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="@dimen/single_product_common_vertical_padding"
+                    app:layout_constraintTop_toBottomOf="@id/underline_1" />
+
+                <View
+                    android:id="@+id/underline_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line_height"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:background="@color/gray_a1"
+                    app:layout_constraintTop_toBottomOf="@id/pfcc" />
+
+                <!--Start: Composition-->
+                <TextView
+                    android:id="@+id/textProductCompositionLabel"
+                    style="@style/Widget.SingleProduct.SemiBoldText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:layout_marginTop="@dimen/single_product_common_vertical_padding"
+                    android:text="@string/single_product_label_composition"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/underline_2" />
+
+                <TextView
+                    android:id="@+id/textProductComposition"
+                    style="@style/Widget.SingleProduct.NormalText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:layout_marginTop="@dimen/single_product_margin_text_top"
+                    android:text="@{product.composition}"
+                    app:layout_constraintTop_toBottomOf="@id/textProductCompositionLabel" />
+
+                <View
+                    android:id="@+id/underline_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line_height"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:layout_marginTop="@dimen/single_product_margin_text_underline_top"
+                    android:background="@color/gray_a1"
+                    app:layout_constraintTop_toBottomOf="@id/textProductComposition" />
+                <!--End: Composition-->
+
+                <!--Start: Expiration date-->
+                <TextView
+                    android:id="@+id/textExpirationDateLabel"
+                    style="@style/Widget.SingleProduct.SemiBoldText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:layout_marginTop="@dimen/single_product_common_vertical_padding"
+                    android:text="@string/single_product_label_exp_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/underline_3" />
+
+                <TextView
+                    android:id="@+id/textExpirationDate"
+                    style="@style/Widget.SingleProduct.NormalText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:layout_marginTop="@dimen/single_product_margin_text_top"
+                    android:text="@{product.composition}"
+                    app:layout_constraintTop_toBottomOf="@id/textExpirationDateLabel" />
+
+                <View
+                    android:id="@+id/underline_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_line_height"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:layout_marginTop="@dimen/single_product_margin_text_underline_top"
+                    android:background="@color/gray_a1"
+                    app:layout_constraintTop_toBottomOf="@id/textExpirationDate" />
+                <!--End: Expiration date-->
+
+                <!--Start: Description-->
+                <TextView
+                    android:id="@+id/textDescriptionLabel"
+                    style="@style/Widget.SingleProduct.SemiBoldText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:layout_marginTop="@dimen/single_product_common_vertical_padding"
+                    android:text="@string/single_product_label_description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/underline_4" />
+
+                <TextView
+                    android:id="@+id/textDescription"
+                    style="@style/Widget.SingleProduct.NormalText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_margin_horizontal"
+                    android:layout_marginTop="@dimen/single_product_margin_text_top"
+                    android:text="@{product.description}"
+                    app:layout_constraintTop_toBottomOf="@id/textDescriptionLabel" />
+                <!--End: Expiration date-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <ru.spoonbill.app.common.widgets.SwipeDownLine
+            android:layout_width="@dimen/swipe_down_line_size"
+            android:layout_height="@dimen/swipe_down_line_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/swipe_down_line_top_margin" />
+
+        <ru.spoonbill.app.common.widgets.SpoonbillAddToCartButton
+            android:id="@+id/buttonAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/single_product_add_to_cart_button_height"
+            android:layout_gravity="bottom"
+            android:background="@color/primary" />
+    </FrameLayout>
+</layout>

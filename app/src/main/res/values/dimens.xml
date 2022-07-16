@@ -2,6 +2,8 @@
 <resources>
 
     <dimen name="common_margin_horizontal">14dp</dimen>
+    <dimen name="common_padding_horizontal">14dp</dimen>
+    <dimen name="common_line_height">1dp</dimen>
 
     <dimen name="custom_text_input_layout_corner_radius">12dp</dimen>
     <dimen name="custom_text_input_layout_margin_top">20dp</dimen>
@@ -23,10 +25,10 @@
     <dimen name="phone_verification_send_code_again_text_margin_start">5dp</dimen>
     <dimen name="phone_verification_send_code_again_text_margin_top">5dp</dimen>
 
-    <dimen name="product_card_item_margin_horizontal">8dp</dimen>
-    <dimen name="product_card_item_margin_end">21dp</dimen>
-    <dimen name="product_card_item_font_size">12sp</dimen>
-    <dimen name="product_card_item_width">94dp</dimen>
+    <dimen name="product_card_item_margin_horizontal">6dp</dimen>
+    <dimen name="product_card_item_margin_end">18dp</dimen>
+    <dimen name="product_card_item_font_size">14sp</dimen>
+    <dimen name="product_card_item_width">106dp</dimen>
 
     <dimen name="product_card_corner_radius">16dp</dimen>
 
@@ -34,9 +36,10 @@
     <dimen name="item_product_list_header_top">18dp</dimen>
     <dimen name="slider_corner_radius">16dp</dimen>
 
-    <dimen name="item_story_size">94dp</dimen>
-    <dimen name="item_story_corner_radius">30dp</dimen>
-    <dimen name="item_story_margin_bottom">21dp</dimen>
+    <dimen name="item_story_height">104dp</dimen>
+    <dimen name="item_story_width">154dp</dimen>
+    <dimen name="item_story_corner_radius">16dp</dimen>
+    <dimen name="item_story_margin_bottom">18dp</dimen>
 
     <dimen name="item_image_slider_height">136dp</dimen>
 
@@ -46,5 +49,29 @@
     <dimen name="toolbar_catalog_widget_corner_radius">12dp</dimen>
 
     <dimen name="category_spacing">10dp</dimen>
+    <dimen name="single_product_width">260dp</dimen>
+    <dimen name="single_product_common_vertical_padding">14dp</dimen>
+    <dimen name="single_product_label_text_size">16sp</dimen>
+    <dimen name="single_product_text_size">14sp</dimen>
+    <dimen name="single_product_margin_text_underline_top">14dp</dimen>
+    <dimen name="single_product_add_to_cart_button_height">60dp</dimen>
+    <dimen name="single_product_margin_text_top">5dp</dimen>
+
+    <dimen name="swipe_down_line_size">40dp</dimen>
+    <dimen name="swipe_down_line_top_margin">10dp</dimen>
+    <dimen name="swipe_down_line_height">3dp</dimen>
+    <dimen name="product_simple_item_image_width">160dp</dimen>
+    <dimen name="product_simple_item_image_height">120dp</dimen>
+    <dimen name="product_simple_item_margin_horizontal">10dp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_64">64dp</dimen>
+    <dimen name="margin_21">21dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_46">46dp</dimen>
 
 </resources>

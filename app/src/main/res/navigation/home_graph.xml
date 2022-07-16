@@ -6,19 +6,11 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="ru.spoonbill.app.ui.home.HomeFragment"
+        android:name="ru.spoonbill.droid.ui.home.HomeFragment"
         android:label="HomeFragment" />
-    <fragment
-        android:id="@+id/catalogFragment"
-        android:name="ru.spoonbill.app.ui.catalog.CatalogFragment"
-        android:label="CatalogFragment" />
 
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="ru.spoonbill.app.ui.fragments.FavoritesFragment"
+        android:name="ru.spoonbill.droid.ui.favorites.FavoritesFragment"
         android:label="FavoritesFragment" />
-    <fragment
-        android:id="@+id/myProfileFragment"
-        android:name="ru.spoonbill.app.ui.fragments.MyProfileFragment"
-        android:label="MyProfileFragment" />
 </navigation>

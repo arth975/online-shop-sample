@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spoonbill_button_circle_size">24dp</dimen>
+    <dimen name="swipe_down_line_size">3dp</dimen>
+    <dimen name="swipe_down_line_corner_radius">5dp</dimen>
+</resources>

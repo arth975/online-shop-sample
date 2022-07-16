@@ -1,102 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
             name="product"
-            type="ru.spoonbill.app.ui.home.model.ProductUi" />
+            type="ru.spoonbill.droid.ui.home.entity.ProductUi" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="@dimen/product_card_item_width"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/product_card_item_margin_end"
         android:layout_marginTop="@dimen/item_product_list_header_bottom"
+        android:layout_marginEnd="@dimen/product_card_item_margin_end"
         android:layout_marginBottom="@dimen/item_product_list_header_top"
-        android:background="@drawable/background_product_card"
-        android:elevation="6dp">
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/product_card_corner_radius"
+        app:cardElevation="6dp"
+        app:rippleColor="@android:color/transparent">
 
-        <ImageView
-            android:id="@+id/image_product"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="68dp"
-            android:contentDescription="@string/image_description"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/image_product" />
+            android:layout_height="wrap_content">
 
-        <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/check_favorite"
-            style="@style/Widget.FavoriteCheckBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="6dp"
-            android:button="@drawable/checkable_button_favorite"
-            android:buttonTint="@color/favorite_selector"
-            android:checked="@{product.isFavorite}"
-            app:background="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="@+id/text_minus"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/text_plus" />
+            <ImageView
+                android:id="@+id/image_product"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:contentDescription="@string/image_description"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <!--Start: Counter-->
-        <TextView
-            android:id="@+id/text_plus"
-            style="@style/Widget.ProductCardItemText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/symbol_plus"
-            app:layout_constraintEnd_toEndOf="@id/text_counter"
-            app:layout_constraintStart_toStartOf="@id/text_counter"
-            app:layout_constraintTop_toBottomOf="@id/image_product" />
+            <TextView
+                android:id="@+id/text_cart_items_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/background_category_name"
+                android:drawablePadding="4dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.04"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:textColor="@color/primary"
+                android:textSize="12sp"
+                app:drawableEndCompat="@drawable/ic_cart_12"
+                app:drawableTint="@color/primary"
+                app:layout_constraintEnd_toEndOf="@id/image_product"
+                app:layout_constraintTop_toTopOf="@id/image_product"
+                tools:text="10" />
 
-        <TextView
-            android:id="@+id/text_counter"
-            style="@style/Widget.ProductCardItemText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="0"
-            app:layout_constraintEnd_toStartOf="@id/check_favorite"
-            app:layout_constraintTop_toBottomOf="@id/text_plus" />
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check_favorite"
+                style="@style/Widget.FavoriteCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:button="@drawable/checkable_button_favorite"
+                android:buttonTint="@color/favorite_selector"
+                android:checked="@{product.isFavorite}"
+                app:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="@id/text_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_price" />
 
-        <TextView
-            android:id="@+id/text_minus"
-            style="@style/Widget.ProductCardItemText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/symbol_minus"
-            app:layout_constraintEnd_toEndOf="@id/text_counter"
-            app:layout_constraintStart_toStartOf="@id/text_counter"
-            app:layout_constraintTop_toBottomOf="@id/text_counter" />
-        <!--End: Counter-->
+            <TextView
+                android:id="@+id/text_price"
+                style="@style/Widget.ProductCardItemText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/product_card_item_margin_horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="5dp"
+                android:text='@{String.valueOf(product.price) + "р"}'
+                android:textSize="@dimen/product_card_item_font_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/check_favorite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_product"
+                tools:text="100р" />
 
-        <TextView
-            android:id="@+id/text_price"
-            style="@style/Widget.ProductCardItemText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/product_card_item_margin_horizontal"
-            android:text='@{String.valueOf(product.price) + "р"}'
-            android:textSize="@dimen/product_card_item_font_size"
-            app:layout_constraintBottom_toBottomOf="@id/text_counter"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text_counter" />
+            <TextView
+                android:id="@+id/text_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:letterSpacing="-0.02"
+                android:lineSpacingExtra="-3dp"
+                android:lines="2"
+                android:paddingHorizontal="@dimen/product_card_item_margin_horizontal"
+                android:paddingTop="2dp"
+                android:paddingBottom="10dp"
+                android:text="@{product.name}"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/text_price"
+                tools:text="Длинное Название товара" />
 
-        <TextView
-            android:id="@+id/text_product_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:letterSpacing="-0.02"
-            android:paddingHorizontal="@dimen/product_card_item_margin_horizontal"
-            android:paddingTop="2dp"
-            android:paddingBottom="10dp"
-            android:text="@{product.name}"
-            android:textSize="12sp"
-            app:layout_constraintTop_toBottomOf="@id/text_minus" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 </layout>
